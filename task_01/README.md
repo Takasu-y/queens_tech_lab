@@ -1,16 +1,9 @@
-# task_01
+# 課題１：ライフサイクル
 
-A new Flutter project.
+アプリのライフサイクルを理解する
 
-## Getting Started
+## 課題1-1
+ライフサイクルの関数ごとにログをコンソール出力する
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 課題1-2
+好きなライブラリを使ってコンソール出力していた文言をトースト表示する
