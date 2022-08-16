@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_01/pages/dummy.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
   runApp(const MyApp());

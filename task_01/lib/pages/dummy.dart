@@ -5,7 +5,7 @@ class DummyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const text = "dummy page";
+    const String text = "dummy page";
 
     return Scaffold(
       appBar: AppBar(
