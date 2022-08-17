@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+// import 'package:fluttertoast/fluttertoast.dart';
 import 'package:task_01/pages/dummy.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:task_01/util/common.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,28 +18,32 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
+  final CommonFunc _commonFunc = CommonFunc();
 
   @override
   State<MyHomePage> createState() {
-    print("create state");
+    // print("create state");
+    _commonFunc.showToastMsg("call create state");
     return _MyHomePageState();
   }
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final CommonFunc _commonFunc = CommonFunc();
   int _counter = 0;
 
   void _incrementCounter() {
     setState(() {
-      print("set state. counterをインクリメント");
+      // print("set state. counterをインクリメント");
+      _commonFunc.showToastMsg("set state. counterをインクリメント");
       _counter++;
     });
 
@@ -56,18 +61,22 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    print("call init state");
+    // print("call init state");
+    _commonFunc.showToastMsg("call init state");
   }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    print("call did change dependencies");
+    // print("call did change dependencies");
+    _commonFunc.showToastMsg("call did change dependencies");
   }
 
   @override
   Widget build(BuildContext context) {
-    print("call build");
+    // print("call build");
+    _commonFunc.showToastMsg("call build");
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -97,12 +106,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void deactivate() {
     super.deactivate();
-    print("call deactivate");
+    // print("call deactivate");
+    _commonFunc.showToastMsg("call deactivate");
   }
 
   @override
   void dispose() {
     super.dispose();
-    print("call dispose");
+    // print("call dispose");
+    _commonFunc.showToastMsg("call dispose");
   }
 }
